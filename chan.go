@@ -7,7 +7,7 @@ import "context"
 
 const DEF_BUF_SIZE = 10
 
-func New[T any](orig <-chan T, size int) <-chan T {
+func New[T any](orig <-chan T, size int) chan T {
 	return NewCtx(context.Background(), orig, size)
 }
 
